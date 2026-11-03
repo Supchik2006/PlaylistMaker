@@ -6,32 +6,4 @@
     </style>
 
     <style name="Theme.PlaylistMaker" parent="Base.Theme.PlaylistMaker" />
-
-    <style name="MenuSettingsText">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_centerVertical">true</item>
-        <item name="android:fontFamily">@font/ys_display_regular</item>
-        <item name="android:textColor">@color/app_black</item>
-        <item name="android:textSize">@dimen/app_text_size_16</item>
-    </style>
-
-    <style name="TextHeader">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">16dp</item>
-        <item name="android:fontFamily">@font/ys_display_medium</item>
-        <item name="android:textColor">@color/app_black</item>
-        <item name="android:textSize">@dimen/app_text_size_22</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="IconBack">
-        <item name="android:src">@drawable/ic_arrow_back</item>
-    </style>
-
-    <style name="MainBackground">
-        <item name="android:background">@color/app_background</item>
-    </style>
-
 </resources>

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/app_white"
     android:padding="16dp">
 
     <LinearLayout
@@ -16,12 +17,16 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:padding="4dp"
-            android:src="@drawable/ic_arrow_back"
-            style="@style/IconBack"/>
+            android:src="@drawable/ic_arrow_back" />
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:text="@string/menu_settings"
-            style="@style/TextHeader" />
+            android:textColor="@color/app_black"
+            android:textSize="@dimen/app_text_size_22"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -36,8 +41,12 @@
             android:layout_height="@dimen/layout_height">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:text="@string/dark_theme"
-                style="@style/MenuSettingsText" />
+                android:textColor="@color/app_black"
+                android:textSize="@dimen/app_text_size_16" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:layout_width="wrap_content"
@@ -54,13 +63,19 @@
             android:layout_height="@dimen/layout_height">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:text="@string/share"
-                style="@style/MenuSettingsText" />
+                android:textColor="@color/app_black"
+                android:textSize="@dimen/app_text_size_16" />
 
             <ImageView
-                android:id="@+id/share_button"
-                android:src="@drawable/ic_share"
-                style="@style/MenuSettingsIcon"/>
+                android:layout_width="@dimen/img_width"
+                android:layout_height="@dimen/img_height"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_share" />
         </RelativeLayout>
 
 
@@ -69,13 +84,19 @@
             android:layout_height="@dimen/layout_height">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:text="@string/support"
-                style="@style/MenuSettingsText"/>
+                android:textColor="@color/app_black"
+                android:textSize="@dimen/app_text_size_16" />
 
             <ImageView
-                android:id="@+id/support_button"
-                android:src="@drawable/ic_support"
-                style="@style/MenuSettingsIcon"/>
+                android:layout_width="@dimen/img_width"
+                android:layout_height="@dimen/img_height"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_support" />
         </RelativeLayout>
 
 
@@ -84,13 +105,19 @@
             android:layout_height="@dimen/layout_height">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:text="@string/agreement"
-                style="@style/MenuSettingsText"/>
+                android:textColor="@color/app_black"
+                android:textSize="@dimen/app_text_size_16" />
 
             <ImageView
-                android:id="@+id/agreement_button"
-                android:src="@drawable/ic_arrow_forward"
-                style="@style/MenuSettingsIcon" />
+                android:layout_width="@dimen/img_width"
+                android:layout_height="@dimen/img_height"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_forward" />
         </RelativeLayout>
 
     </LinearLayout>
