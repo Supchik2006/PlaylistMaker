@@ -1,13 +1,12 @@
 package com.gmt.playlistmaker
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
+import androidx.core.widget.doOnTextChanged
 
 
 class SearchActivity : AppCompatActivity() {
@@ -25,36 +24,10 @@ class SearchActivity : AppCompatActivity() {
         etSearch = findViewById(R.id.et_search)
         val cleanSearch = findViewById<ImageView>(R.id.clean_search)
 
-        val simpleTextWatcher = object : TextWatcher {
-            override fun afterTextChanged(p0: Editable?) {
-
-            }
-
-            override fun beforeTextChanged(
-                p0: CharSequence?,
-                p1: Int,
-                p2: Int,
-                p3: Int
-            ) {
-
-            }
-
-            override fun onTextChanged(
-                p0: CharSequence?,
-                p1: Int,
-                p2: Int,
-                p3: Int
-            ) {
-                if (!p0.isNullOrEmpty()) {
-                    searchText = p0.toString()
-                    cleanSearch.visibility = View.VISIBLE
-                } else {
-                    searchText = ""
-                    cleanSearch.visibility = View.GONE
-                }
-            }
+        etSearch.doOnTextChanged { text, _, _, _ ->
+            searchText = text?.toString().orEmpty()
+            cleanSearch.isVisible = !text.isNullOrEmpty()
         }
-        etSearch.addTextChangedListener(simpleTextWatcher)
 
         cleanSearch.setOnClickListener {
             etSearch.setText("")
@@ -78,4 +51,3 @@ class SearchActivity : AppCompatActivity() {
     }
 
 }
-//
