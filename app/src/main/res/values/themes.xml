@@ -43,4 +43,9 @@
         <item name="android:background">@color/app_background</item>
     </style>
 
+    <style name="TrackRecyclerView">
+        <item name="android:background">@color/app_white</item>
+    </style>
+
+
 </resources>
